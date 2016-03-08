@@ -7,21 +7,25 @@ library(dplyr)
 
 shinyUI(fluidPage(
   # Main title panel
-  titlePanel("World Disease Spread"),
+  titlePanel("Spread of Diseases Worldwide"),
   
   # Declare a sidebar layout
   sidebarLayout(
     
     # Put sidebar elements in here
     sidebarPanel(
-      selectInput("dis", label = h3("Disease"), 
-                  choices = list(), 
-                  selected = '')
+      sliderInput("Year", "Year:", min = 1991, max = 2014, value = 2000),
+      checkboxGroupInput("Disease", label = h3("Disease"), 
+                         choices = c("Buruli Ulcer" = "Buruli Ulcer",
+                                     "HAT" = "HAT",
+                                     "Leishmaniasis" = "Leishmaniasis",
+                                     "Leprosy" = "Leprosy",
+                                     "Malaria" = "Malaria",
+                                     "River Blindness" = "River Blindness"))
     ),
     
     #Put main stuff in here
     mainPanel(
-      plotlyOutput('map')
     )
   )
 ))
