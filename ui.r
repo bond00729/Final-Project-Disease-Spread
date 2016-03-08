@@ -17,8 +17,8 @@ shinyUI(fluidPage(
       sliderInput("Year", "Year:", min = 1991, max = 2014, value = 2000),
       checkboxGroupInput("Disease", label = h3("Disease"), 
                          choices = c("Buruli Ulcer" = "Buruli Ulcer",
+                                     "Black Fever (Leishmaniasis)" = "Leishmaniasis",
                                      "HAT" = "HAT",
-                                     "Leishmaniasis" = "Leishmaniasis",
                                      "Leprosy" = "Leprosy",
                                      "Malaria" = "Malaria",
                                      "River Blindness" = "River Blindness"))
