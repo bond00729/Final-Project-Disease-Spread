@@ -26,6 +26,7 @@ shinyUI(fluidPage(
     
     #Put main stuff in here
     mainPanel(
+      plotlyOutput('map')
     )
   )
 ))

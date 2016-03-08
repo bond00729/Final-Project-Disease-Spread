@@ -19,8 +19,8 @@ shinyServer(function(input, output) {
       projection = list(type = 'Mercator')
     )
     
-    plot_ly(HAT, z = X2012, text = Country, locations = Country, locationmode = "country names", type = 'choropleth',
-            color = X2012, colors = 'Reds', marker = list(line = l),
+    plot_ly(buruli_ulcer, z = X2008, text = Country, locations = Code, type = 'choropleth',
+            color = X2008, colors = 'Reds', marker = list(line = l),
             colorbar = list(title = 'Number of Cases')) %>%
       layout(title = 'Spread of Diseases Worldwide',
              geo = g)
