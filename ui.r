@@ -37,12 +37,13 @@ shinyUI(fluidPage(theme = "bootstrap.css",
           .control-label {
             font-size: 16pt
           }
-       "))
+       ")),
+        tags$title("Spread of Diseases Worldwide")
       ),
                   
       #Main title panel
-      titlePanel(title = h1("Spread of Diseases Worldwide (2005-2013)")),
-      titlePanel("By Brandon Mar, Brendan Powers, Matthew Bond, and Markos Mezegbu"),
+      tags$h1("Spread of Diseases Worldwide (2005-2013)"),
+      headerPanel(h2("By Brandon Mar, Brendan Powers, Matthew Bond, and Markos Mezegbu")),
       
       #Declared a sidebar layout
       sidebarLayout(
