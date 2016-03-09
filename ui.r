@@ -6,13 +6,13 @@ library(plotly)
 library(dplyr)
 
 shinyUI(fluidPage(
-  # Main title panel
+  #Main title panel
   titlePanel("Spread of Diseases Worldwide"),
   
-  # Declare a sidebar layout
+  #Declared a sidebar layout
   sidebarLayout(
     
-    # Put sidebar elements in here
+    #Added sidebar elements in here
     sidebarPanel(
       sliderInput("Year", "Year:", min = 2005, max = 2013, value = 2005, sep = ""),
       selectInput("disease1", label = h3("Choose a disease"), 

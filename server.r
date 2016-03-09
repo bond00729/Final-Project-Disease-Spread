@@ -7,10 +7,10 @@ library(dplyr)
 source("data_wrangling.R")
 
 plotDisease <- function(df, year, dfName){
-  # light grey boundaries
+  # set light grey boundaries
   l <- list(color = toRGB("black"), width = 0.5)
   
-  # specify map projection/options
+  # specified map projection/options
   g <- list(
     showframe = FALSE,
     showcoastlines = TRUE,
@@ -25,6 +25,8 @@ plotDisease <- function(df, year, dfName){
 }
 
 shinyServer(function(input, output) {
+  
+  #Disease Descriptions
   
   BuruliDesc <- 'Buruli ulcer is a disease caused by infection with the organism Mycobacterium ulcerans mainly affecting 
   skin but also affecting bone in certain cases. Its found mainly in tropical areas such as West Africa and 
@@ -43,6 +45,7 @@ shinyServer(function(input, output) {
   OnchDesc <- 'Onchocerciasis is a parasitic, tropical disease spread by repeated bites from infected black flies. Its most common in remote African villages. 
   Symptoms usually dont appear for one to two years after infection, but include skin nodules, itching, eye infections, and blindness. (Mayo Clinic)'
   
+  #Creates text for first widget
   createText1 <- eventReactive(input$disease1,  {
     if (input$disease1 == "Buruli_Ulcer") {
       return(BuruliDesc)
@@ -64,6 +67,7 @@ shinyServer(function(input, output) {
     }
   })
   
+  #Creates text under 2nd widget
   createText2 <- eventReactive(input$disease2,  {
     if (input$disease2 == "Buruli_Ulcer") {
       return(BuruliDesc)
@@ -85,6 +89,7 @@ shinyServer(function(input, output) {
     }
   })
   
+  #Renders 1st plot
   output$map <- renderPlotly({
     A <- paste0('X', input$Year)
     Name1 <- input$disease1
@@ -92,6 +97,7 @@ shinyServer(function(input, output) {
     plotDisease(Dis1, A, Name1)
   })
   
+  #Renders 2nd plot
   output$map2 <- renderPlotly({
     B <- paste0('X', input$Year)
     Name2 <- input$disease2
@@ -99,10 +105,12 @@ shinyServer(function(input, output) {
     plotDisease(Dis2, B, Name2)
   })
   
+  #Renders 1st description
   output$description1 <- renderUI({
     helpText(createText1())
   })
   
+  #Renders 2nd description
   output$description2 <- renderUI({
     helpText(createText2())
   })
