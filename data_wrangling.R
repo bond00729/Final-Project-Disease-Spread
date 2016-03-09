@@ -1,3 +1,5 @@
+#data retrieved from WHO database
+
 Leprosy <- remove_no_data(read.csv("data/Leprosy.csv", stringsAsFactors = FALSE))
 Leishmaniasis <- remove_no_data(read.csv("data/Leishmaniasis.csv", stringsAsFactors = FALSE))
 Malaria <- remove_no_data(read.csv("data/Malaria.csv", stringsAsFactors = FALSE))
