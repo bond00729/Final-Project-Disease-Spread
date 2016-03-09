@@ -26,7 +26,7 @@ plotDisease <- function(df, year, dfName){
 
 shinyServer(function(input, output) {
   
-  #Disease Descriptions
+  #Disease Descriptions from MayoClinic.org
   
   BuruliDesc <- 'Buruli ulcer is a disease caused by infection with the organism Mycobacterium ulcerans mainly affecting 
   skin but also affecting bone in certain cases. Its found mainly in tropical areas such as West Africa and 
@@ -45,7 +45,7 @@ shinyServer(function(input, output) {
   OnchDesc <- 'Onchocerciasis is a parasitic, tropical disease spread by repeated bites from infected black flies. Its most common in remote African villages. 
   Symptoms usually dont appear for one to two years after infection, but include skin nodules, itching, eye infections, and blindness. (Mayo Clinic)'
   
-  #Creates text for first widget
+  #Creates text under first widget
   createText1 <- eventReactive(input$disease1,  {
     if (input$disease1 == "Buruli_Ulcer") {
       return(BuruliDesc)
