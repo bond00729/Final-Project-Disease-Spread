@@ -14,7 +14,7 @@ shinyUI(fluidPage(
     
     # Put sidebar elements in here
     sidebarPanel(
-      sliderInput("Year", "Year:", min = 1991, max = 2014, value = 2000),
+      sliderInput("Year", "Year:", min = 1991, max = 2014, value = 2000, sep = ""),
       checkboxGroupInput("Disease", label = h3("Disease"), 
                          choices = c("Buruli Ulcer" = "Buruli Ulcer",
                                      "Black Fever (Leishmaniasis)" = "Leishmaniasis",
