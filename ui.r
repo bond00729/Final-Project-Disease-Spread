@@ -44,7 +44,7 @@ shinyUI(fluidPage(theme = "bootstrap.css",
       #Main title panel
       tags$h1("Spread of Diseases Worldwide (2005-2013)"),
       headerPanel(h2("By Brandon Mar, Brendan Powers, Matthew Bond, and Markos Mezegbu")),
-      
+      tags$p("hello world"),
       #Declared a sidebar layout
       sidebarLayout(
         
