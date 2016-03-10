@@ -10,10 +10,10 @@ shinyUI(fluidPage(theme = "bootstrap.css",
       #Adding CSS to webpage
       tags$head(
         tags$style(HTML("
-          @import url('//fonts.googleapis.com/css?family=Cinzel:400,900');
+          @import url('//fonts.googleapis.com/css?family=Hind:400,900');
 
           h1, h2 {
-            font-family: 'Cinzel', serif;
+            font-family: 'Hind', serif;
             text-align: center;
           }
 
@@ -44,11 +44,11 @@ shinyUI(fluidPage(theme = "bootstrap.css",
       #Main title panel
       tags$h1("Spread of Diseases Worldwide (2005-2013)"),
       headerPanel(h2("By Brandon Mar, Brendan Powers, Matthew Bond, and Markos Mezegbu")),
-      tags$p("Using data from the World Health Organization (WHO) we have created visual representations of
+      tags$p("Using data from the World Health Organization (WHO), we have created visual representations of
              diseases that affect people worldwide. Using the data, we have been able to answer many of our
-             own questions, such as, where do these diseases take place most often, and is there a downward
-             trend in cases for each disease? With the tool we created anyone can answer their own questions
-             regarding diseases throughout the world."),
+             own questions, such as where the diseases occur most frequently, if downward
+             trends have been occuring, and more. With this tool we've created, anyone can find answers to
+             many of their own questions regarding diseases throughout the world."),
       #Declared a sidebar layout
       sidebarLayout(
         
