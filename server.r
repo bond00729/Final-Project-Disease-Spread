@@ -37,7 +37,7 @@ shinyServer(function(input, output) {
   LeisDesc <- 'Black Fever is a disease caused by infection spread by sandfly bites affecting internal organs such as the spleen, liver, 
   and bone marrow. It is most common in India. Symptoms may include fever, weight loss, and swelling of spleen or liver. 
   (Mayo Clinic)'
-  LepDesc <- 'Leprosy is a rare diseases caused by infection with the bacterium Mycobacterium leprae. 80% of cases are found in India, Indonesia, Myanmar, Brazil, and Nigeria. 
+  LepDesc <- 'Leprosy is a rare disease caused by infection with the bacterium Mycobacterium leprae. 80% of cases are found in India, Indonesia, Myanmar, Brazil, and Nigeria. 
   It mainly affects skin and peripheral and symptoms include pale or red skin lesiobs, reduced sensation, and numbness. (Mayo Clinic)'
   MalDesc <- 'Malaria is a disease caused by a plasmodium parasite, transmitted through mosquito bites. Symptoms are chills, fever, and sweating.
   About half of the worlds population is at risk with large areas of Africa, South Asia, South America, the Middle East and others 
