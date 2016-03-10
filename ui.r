@@ -11,7 +11,7 @@ shinyUI(fluidPage(theme = "bootstrap.css",
       tags$head(
         tags$style(HTML("
           @import url('//fonts.googleapis.com/css?family=Cinzel:400,900');
-          
+
           h1, h2 {
             font-family: 'Cinzel', serif;
             text-align: center;

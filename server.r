@@ -18,7 +18,7 @@ plotDisease <- function(df, year, dfName){
   )
   
   plot_ly(na.omit(df), z = as.numeric(eval(parse(text = year))), text = as.vector(Country), locations = as.vector(Country), locationmode = 'country names', type = 'choropleth',
-          color = as.numeric(eval(parse(text = year))), colors = 'Reds', marker = list(line = l),
+          color = as.numeric(eval(parse(text = year))), colors = 'Blues', marker = list(line = l),
           colorbar = list(title = 'Number of Cases')) %>%
     layout(title = gsub('_', ' ', dfName, fixed = TRUE),
            geo = g)
