@@ -44,7 +44,11 @@ shinyUI(fluidPage(theme = "bootstrap.css",
       #Main title panel
       tags$h1("Spread of Diseases Worldwide (2005-2013)"),
       headerPanel(h2("By Brandon Mar, Brendan Powers, Matthew Bond, and Markos Mezegbu")),
-      tags$p("Using data from the World Health Organization (WHO) we have created visual representations of diseases that affect people worldwide. Using the data, we have been able to answer many of our own questions, such as, where do these diseases take place most often, and is there a downward trend in cases for each disease? With the tool we created anyone can answer their own questions regarding diseases throughout the world."),
+      tags$p("Using data from the World Health Organization (WHO) we have created visual representations of
+             diseases that affect people worldwide. Using the data, we have been able to answer many of our
+             own questions, such as, where do these diseases take place most often, and is there a downward
+             trend in cases for each disease? With the tool we created anyone can answer their own questions
+             regarding diseases throughout the world."),
       #Declared a sidebar layout
       sidebarLayout(
         
